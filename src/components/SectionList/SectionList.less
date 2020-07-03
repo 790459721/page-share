@@ -1,0 +1,124 @@
+.backgroundColor {
+    background: #fff;
+}
+.backgroundStyle(@url,@size) {
+    background: url(@url) no-repeat center;
+    background-size: @size;
+}
+.textStyle(@color,@fontSize,@lineHeight) {
+    color:@color;
+    line-height: @lineHeight;
+    font-size: @fontSize;
+}
+.course_detail_content {
+    .backgroundColor();
+    .content_course_list {
+        padding-top: .34rem;
+        .issue_word_module {
+            width: 6.9rem;
+            height: 1.48rem;
+            box-sizing: border-box;
+            padding: 0 .24rem;
+            border-radius: .04rem;
+            background: #f7f7f7;
+            margin: 0 auto;
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+            .issue_word_name {
+                & > span {
+                    .textStyle(#333, .34rem, .48rem);
+                    font-weight: bold;
+                }
+            }
+            .issue_paly_icon {
+                width: .6rem;
+                height: .6rem;
+                .backgroundStyle('../../assets/images/icon-play.png', contain)
+            }
+            .issue_word_tag {
+                position: absolute;
+                border-bottom-left-radius: .15rem;
+                height: .3rem;
+                width: .85rem;
+                text-align: center;
+                top: 0;
+                right: 0;
+                background: #E72D2D;
+                .textStyle(#fff, .18rem, .3rem);
+            }
+        }
+        .list_box {
+            .list_section {
+                padding: 0 .39rem 0 .27rem;
+               .section_title {
+                   height: 1.18rem;
+                   border-bottom: .01rem solid #ccc;
+                   .textStyle(#333333, .34rem,.48rem);
+                   display: flex;
+                   justify-content: space-between;
+                   align-items: center;
+                   .title_icon {
+                       width: .17rem;
+                       height: .3rem;
+                       .backgroundStyle('../../assets/images/icon_arrow_right.png', cover);
+                       &.arrow_right {
+                        width: .17rem;
+                        height: .3rem;
+                        .backgroundStyle('../../assets/images/icon_arrow_right.png', cover);
+                       }
+                       &.arrow_down {
+                        width: .3rem;
+                        height: .17rem;
+                        .backgroundStyle('../../assets/images/icon_arrow_down.png', cover);
+                       }
+                   }
+                   &.noboder {
+                       border-bottom: none;
+                   }
+               }
+               .section_list {
+                   background: #f7f7f7;
+                   padding: 0 .3rem;
+                   .section_list_item {
+                       border-bottom: .01rem solid #ccc ;
+                       display: flex;
+                       justify-content: space-between;
+                       align-items: center;
+                       padding: .18rem 0;
+                       .item_left {
+                           .item_title {
+                               .textStyle(#444, .32rem, .45rem);
+                           }
+                           .item_learn_time {
+                               padding-left: .04rem;
+                                .textStyle(#999, .28rem, .4rem);
+                           }
+                           .rest_time {
+                               .textStyle(#999, .24rem, .33rem);
+                               padding-left: .35rem;
+                               background: url('../../assets/images/icon_phone.png') no-repeat left center;
+                               background-size: .3rem .3rem;
+                           }
+                       }
+                       .item_right {
+                           padding-left: .38rem;
+                           .textStyle(#999, .28rem, .4rem);
+                           background: url('../../assets/images/icon-play.png') no-repeat left center;
+                           background-size: .3rem .3rem;
+                       }
+                   }
+                   & > .section_list_item:last-child {
+                        border-bottom: none;
+                    }
+               }
+            }
+            & > .list_section:last-child {
+                .section_title {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

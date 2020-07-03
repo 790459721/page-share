@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import setRem from './utils/util.rem'
+import './styles/reset.less'
+setRem(750,100)
 ReactDOM.render(
   <React.StrictMode>
     <App />

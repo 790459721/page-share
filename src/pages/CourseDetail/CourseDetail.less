@@ -1,0 +1,98 @@
+.backgroundColor {
+    background: #fff;
+}
+.backgroundStyle(@url,@size) {
+    background: url(@url) no-repeat center;
+    background-size: @size;
+}
+.textStyle(@color,@fontSize,@lineHeight) {
+    color:@color;
+    line-height: @lineHeight;
+    font-size: @fontSize;
+}
+.course_detail_wrapper {
+    min-height: 100vh;
+    background: #fff;
+    .course_detail_banner {
+        width: 100vw;
+        height: 3rem;
+    }
+    .course_detail_header {
+        box-sizing: border-box;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .3rem .45rem  .22rem .36rem;
+        .backgroundColor();
+        .header_left {
+            .left_top {
+                display: flex;
+                align-items: center;
+                margin-bottom: .1rem;
+                .header_title {
+                    .textStyle(#333,.32rem,.45rem);
+                    margin-right: .28rem;
+                }
+                .header_total_classes {
+                    border-radius: .2rem;
+                    border: .01rem solid #2ccd7a;
+                    padding: 0 .14rem;
+                    height: .37rem;
+                    .textStyle(#2ccd7a, .26rem, .37rem)
+                }
+            }
+            .header_course_desc {
+                .textStyle(#666,.26rem,.37rem);
+            }
+        }
+    }
+    .main_split {
+        height: .2rem;
+        background: #f7f7f7;
+    }
+    .course_detail_main {
+        padding-bottom: .5rem;
+        background: #fff;
+        .course_tab_box {
+            display: flex;
+            height: 1.2rem;
+            .backgroundColor();
+            align-items: center;
+            padding: 0 .39rem;
+            justify-content: space-between;
+            border-bottom: .01rem solid #ccc;
+            .tab_item {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                position: relative;
+                .textStyle(#333, .32rem, .45rem);
+                font-weight: 500;
+                .mark_round {
+                    width: .16rem;
+                    height: .16rem;
+                    background: #e72d2d;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: .38rem;
+                    right: -.15rem;
+                }
+                &.active {
+                    .textStyle(#2CCD7A, .32rem, .45rem);
+                    font-weight: 500;
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        background: #2ccd7a;
+                        height: .02rem;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+    }
+}
