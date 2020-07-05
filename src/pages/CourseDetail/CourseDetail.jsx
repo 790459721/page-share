@@ -11,13 +11,23 @@ function CourseDetail() {
     const tabList = ['课程介绍', '课程目录', '课程评价（100）']
     //state
     const [activeIndex, setActiveIndex] = useState(null) // 章节item点击的激活状态
-    const [tabIndex, setTabIndex] = useState(0) // tab当前index
+    const [tabIndex, setTabIndex] = useState(2) // tab当前index
+
+
     const handleTabClick = (index) => {
         setTabIndex(index)
     }
     const handleClickSection = (key) => {
         setActiveIndex(key === activeIndex ? null : key)
     }
+    
+    useEffect(() => {
+        document.title = '课程详情页'
+        return () => {
+            document.title = ''
+        }
+    },[])
+
     return (
         <div className="course_detail_wrapper">
             <div className="course_detail_banner"></div>

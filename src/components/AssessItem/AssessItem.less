@@ -1,0 +1,59 @@
+.assess_item_box {
+    display: flex;
+    border-bottom: .01rem solid #ccc;
+    padding-bottom: .19rem;
+    padding-top: .3rem;
+    .item_avatar {
+        width: .84rem;
+        height: .84rem;
+        border-radius: 50%;
+        background: #666;
+        flex-shrink: 0;
+        margin-right: .2rem;
+    }
+    .item_right {
+        .item_user_info {
+            display: flex;
+            align-items: center;
+            .user_name {
+                width: 2.8rem;
+                font-size: .34rem;
+                color: #333333;
+                font-weight: 500;
+                line-height: .48rem;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                margin-right: .46rem;
+            }
+            .item_date, .like_num {
+                font-size: .3rem;
+                color: #999;
+                font-weight: 500;
+                flex-shrink: 0;
+                line-height: .42rem;
+                margin-right: 1.1rem;
+            }
+            .item_like_num {
+                display: flex;
+                align-items: center;
+                .like_icon {
+                    width: .32rem;
+                    height: .32rem;
+                    background: url(../../assets/images/icon_like.png) no-repeat center;
+                    background-size: contain;
+                    margin-right: .12rem;
+                }
+            }
+        }
+        .item_content {
+            width: 5.7rem;
+            margin-top: .12rem;
+            font-size:.3rem;
+            font-weight:500;
+            color:rgba(102,102,102,1);
+            line-height:.42rem;
+            flex-shrink: 0;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.star_box {
+    display: flex;
+    align-items: center;
+    .star_item{
+        width: .4rem;
+        height: .4rem;
+        background-size: contain;
+        &.large_star {
+            width: .6rem;
+            height: .6rem;
+            background-size: contain; 
+        }
+        &.star_full {
+            background-image: url(../../assets/images/icon_full_star.png);
+        }
+        &.star_half {
+            background-image: url(../../assets/images/icon_half_star.png);
+        }
+    }
+}
