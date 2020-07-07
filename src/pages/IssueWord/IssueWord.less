@@ -1,0 +1,81 @@
+.issue_wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    background: #fff;
+    padding-top: .9rem;
+    .issue_banner {
+        width: 100%;
+        height: 3.68rem;
+        background: url(../../assets/images/issue_banner.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .issue_title {
+        font-size: .54rem;
+        color: #333;
+        font-weight: 500;
+        padding: .5rem;
+    }
+    .issue_content_title {
+        text-align: center;
+        color: #333;
+        font-weight: 500;
+        font-size: .45rem;
+        margin: .5rem 0 .8rem 0;
+    }
+    .issue_content {
+        display: block;
+        text-align: justify;
+        padding: 0 .5rem 1rem;
+        font-size: .4rem;
+        color: #333;
+        line-height: .56rem;
+        & > p {
+            text-indent: .8rem;
+        }
+    }
+    .issuce_footer {
+        position: fixed;
+        height: .94rem;
+        width: 100vw;
+        display: flex;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+        .issuce_price_box {
+            display: flex;
+            width: 50vw;
+            box-sizing: border-box;
+            padding: 0 .68rem 0 .39rem;
+            justify-content: space-between;
+            align-items: center;
+            .issuce_price {
+                color: #F6726D;
+                font-size: .4rem;
+                font-weight: 500;
+            }
+            .price_detial {
+                display: flex;
+                align-items: center;
+               .price_detail_txt {
+                   color: #999;
+                   font-size: .22rem;
+               }
+               .icon_arrow_up {
+                   width: .2rem;
+                   height: .11rem;
+                   background: url(../../assets/images/icon_arrow_up.png) no-repeat center;
+                   background-size: 100% 100%;
+               }
+            }
+        }
+        .footer_btn {
+            background: #28CC77;
+            width: 50vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFFFFF;
+            font-size: .36rem;
+        }
+    }
+}

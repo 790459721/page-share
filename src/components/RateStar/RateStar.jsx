@@ -8,7 +8,6 @@ function RateStar(props) {
     const getStar = (score) => {
         const newStar =starNum.map(()=>{
             --score;
-            console.log(score);
             return score >=1 ? 'star_full' : 'star_half'; 
         })
         setStarNum([...newStar])
@@ -16,6 +15,7 @@ function RateStar(props) {
 
     useEffect(() => {
         getStar(Math.round(score)+1)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[score])
     return (
         <div>

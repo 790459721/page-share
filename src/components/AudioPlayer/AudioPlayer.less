@@ -1,0 +1,92 @@
+.audioComponent {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    width: 6.5rem;
+    height: 1.4rem;
+    border-radius: .08rem;
+    margin: 0 auto;
+    padding: .2rem;
+    box-sizing: border-box;
+    .control_btn {
+        margin-right: .31rem;
+        .play_btn {
+            width: .84rem;
+            height: .84rem;
+            background: url(../../assets/images/icon_audio_pause.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+        .pause_btn {
+            width: .84rem;
+            height: .84rem;
+            background: url(../../assets/images/icon_audio_play.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+    }
+    .control_process_box {
+        .audio_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .audio_name {
+                color: #333;
+                font-size: .34rem;
+            }
+            .audio_size {
+                color: #999;
+                font-size: .26rem;
+            }
+        }
+        .audio_time {
+            color: #999;
+            font-size: .26rem;
+            display: flex;
+            width: 4.9rem;
+            justify-content: space-between;
+            
+        }
+    }
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+    .control_process {
+        margin-bottom: .1rem;
+        input[type=range]{ 
+                outline: none; 
+                padding: 0;
+                -webkit-appearance: none;/*清除系统默认样式*/  
+                width: 4.9rem; 
+                background: -webkit-linear-gradient(#27CD77, #27CD7712) no-repeat, #ccc;  
+                background-size: 0% 100%;/*设置左右宽度比例*/  
+                height: .06rem;/*横条的高度*/  
+        } 
+        /*拖动块的样式*/  
+        input[type=range]::-webkit-slider-thumb {  
+            -webkit-appearance: none;/*清除系统默认样式*/  
+            height:.2rem;/*拖动块高度*/  
+            width:.2rem;/*拖动块宽度*/  
+            background: #fff;/*拖动块背景*/  
+            border-radius: 50%; /*外观设置为圆形*/  
+            border: solid .01rem #ccc; /*设置边框*/  
+        }
+    }
+    .volume-box {
+        display: flex;
+        position: relative;
+        margin-left: 10px;
+    }
+    .pannel {
+        background: red;
+        position: absolute;
+        top: -26px;
+        left: -38px;
+        display: flex;
+        align-items: center;
+        height: 20px;
+    }    
+    .volume {
+        width: 80px;
+        margin-left: 0;
+    }
+}
