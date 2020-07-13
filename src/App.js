@@ -1,20 +1,25 @@
+/*
+ * @Author: zhangxr
+ * @Date: 2020-07-09 09:20:12
+ * @Description: 
+ */ 
 import React, { useEffect } from 'react';
-import { BrowserRouter, Switch } from 'react-router-dom';
+import { Switch, HashRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import routes from './routes'
-import TopNav from './components/TopNav/TopNav';
+// import TopNav from './components/TopNav/TopNav';
 function App() {
   useEffect(() => {
     console.log(process.env);
   })
   return (
     <div>
-      <TopNav />
-      <BrowserRouter>
+      {/* <TopNav /> */}
+      <HashRouter>
         <Switch>
           {renderRoutes(routes)}
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

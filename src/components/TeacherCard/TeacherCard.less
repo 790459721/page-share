@@ -19,7 +19,9 @@
         .top_avatar {
             width: .64rem;
             height: .64rem;
-            background: #ccc;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
             border-radius: 50%;
             margin-right: .41rem;
 
@@ -30,5 +32,10 @@
         color: #666;
         line-height: .3rem;
         text-align: justify;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        display:-webkit-box;
+        -webkit-line-clamp:6; 
+        -webkit-box-orient:vertical;
     }
 }

@@ -12,6 +12,7 @@ class AudioPlayer extends Component {
             showVioce: false // 是否展示静音图标
         }
         this.playInput = React.createRef();
+        
     }
     millisecondToDate(time) {
         const second = Math.floor(time % 60)
@@ -19,10 +20,10 @@ class AudioPlayer extends Component {
         return `${minite}:${second >= 10 ? second : `0${second}`}`
     }
     changeAudio(type, value) {
-        const { id, src } = this.props;
+        const { id } = this.props;
         const { allTime } = this.state;
         const audio = document.getElementById(`myAudio${id}`)
-        audio.volume = 0.5
+        audio.volume = 1
         switch (type) {
             case 'allTime':
                 this.setState({
@@ -78,13 +79,14 @@ class AudioPlayer extends Component {
         })
     }
     render() {
-        const { id, src, isPlay, currentTime, allTime } = this.state
+        const { id, isPlay, currentTime, allTime } = this.state
+        const { audioName, audioSize, audioUrl } = this.props.data
         return (
             <div className="audioComponent">
                 <audio 
                     preload="true"
                     id={`myAudio${id}`}
-                    src={'http://music.163.com/song/media/outer/url?id=1436709403.mp3'}
+                    src={audioUrl}
                     onCanPlay={() => this.changeAudio('allTime')}
                     onTimeUpdate={(e) => this.changeAudio('getCurrentTime')}
                     onEnded={()=> this.audioEnded()}
@@ -100,8 +102,8 @@ class AudioPlayer extends Component {
                 </div>
                 <div className="control_process_box">
                     <div className="audio_top">
-                        <div className="audio_name">膳食营养</div>
-                        <div className="audio_size">10.9MB</div>
+                        <div className="audio_name">{audioName}</div>
+                        <div className="audio_size">{audioSize}</div>
                     </div>
                     <div className="control_process">
                         <input
